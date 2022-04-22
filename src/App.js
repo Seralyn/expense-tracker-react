@@ -1,5 +1,6 @@
 import Expenses from "./components/Expense/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
+import ExpenseFilter from "./components/Expense/ExpensesFilter";
 
 function App() {
   const expenses = [
@@ -31,11 +32,12 @@ function App() {
 
   const addExpenseHandler = (expense) => {
     console.log(`in app.js`);
-    console.log(expenses);
+    console.log(expense);
   };
   return (
     <div>
       <NewExpense onAddExpense={addExpenseHandler} />
+      <ExpenseFilter onFilterYearChoose={} />
       <Expenses items={expenses} />
     </div>
   );
